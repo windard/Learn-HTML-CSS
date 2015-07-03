@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Window's height and width</title>
+	<script src="jquery-2.1.1.min.js"></script>
+</head>
+<script type="text/javascript"> 
+$(document).ready(function() 
+{ 
+	$("#one").click(function(){
+		alert($(window).height()); //浏览器当前窗口可视区域高度 
+	});
+	$("#two").click(function(){	
+		alert($(document).height()); //浏览器当前窗口文档的高度 
+	});
+	$("#three").click(function(){	
+		alert($(document.body).height());//浏览器当前窗口文档body的高度 
+	});
+	$("#four").click(function(){	
+		alert($(document.body).outerHeight(true));//浏览器当前窗口文档body的总高度 包括border padding margin 
+	});
+	$("#five").click(function(){	
+		alert($(window).width()); //浏览器当前窗口可视区域宽度 
+	});
+	$("#six").click(function(){	
+		alert($(document).width());//浏览器当前窗口文档对象宽度
+	});
+	$("#seven").click(function(){	 
+		alert($(document.body).width());//浏览器当前窗口文档body的宽度 
+	});
+	$("#eight").click(function(){	
+		alert($(document.body).outerWidth(true));//浏览器当前窗口文档body的总宽度 包括border padding margin 
+	});	
+
+});
+</script> 
+<body style="text-align:center">
+	这里可以显示屏幕大小！<br>
+	<br><br><button id="one" style="width=100%;height:50px;">浏览器当前窗口可视区域高度 </button>
+	<br><br><button id="two" style="width=100%;height:50px;">浏览器当前窗口文档的高度 </button>
+	<br><br><button id="three" style="width=100%;height:50px;">浏览器当前窗口文档body的高度 </button>
+	<br><br><button id="four" style="width=100%;height:50px;">浏览器当前窗口文档body的总高度 包括border padding margin </button>
+	<br><br><button id="five" style="width=100%;height:50px;">浏览器当前窗口可视区域宽度 </button>
+	<br><br><button id="six" style="width=100%;height:50px;">浏览器当前窗口文档对象宽度 </button>
+	<br><br><button id="seven" style="width=100%;height:50px;">浏览器当前窗口文档body的宽度</button>
+	<br><br><button id="eight" style="width=100%;height:50px;">浏览器当前窗口文档body的总宽度 包括border padding margin </button>
+</body>
+</html>
