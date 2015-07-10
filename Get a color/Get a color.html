@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Change Color</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	div{
+		width: 500px;
+		height: 300px;
+		margin: 100px auto 0;
+		text-align: center;
+	}
+	button{
+		border: none;
+		margin-top: 50px;
+		color:white;
+		width: 100px;
+		height: 50px;
+		outline: none;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+	</style>
+	<script>
+	function randomVal(val){
+		return Math.floor(Math.random()*(val+1));
+	}
+
+	function randomColor(){
+		var r = randomVal(255).toString(16);
+		if(r.length<2) r = "0" + r;
+
+		var g = randomVal(255).toString(16);
+		if(g.length<2) g = "0" + g; 
+
+		var b = randomVal(255).toString(16);
+		if(b.length<2) b = "0" + b;	
+
+		var DIV = document.getElementById('div');
+		var SPAN = document.getElementById('span');
+		DIV.style.backgroundColor = "#" + r + g + b;
+		SPAN.innerHTML = "#" + r + g + b;
+	}
+	</script>
+</head>
+<body>
+	<div id="div">
+		<button onclick="randomColor()">Chang Color </button><br/><br/><br/><br/><br/>
+		<span id="span"></span>
+	</div>
+</body>
+</html>
