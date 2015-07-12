@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	@media (min-width: 768px) and (max-width: 991px) {
+		#one,#two{
+			display: block;
+			width: 25%;
+			height: 200px;
+			float: left;
+		}
+		#three{
+			display: block;
+			width: 25%;
+			height: 200px;
+			clear: both;
+			float: left;
+
+		}
+		#four{
+			display: block;
+			width: 25%;
+			height: 200px;
+			float: left;
+		}
+}
+	@media (min-width: 992px) and (max-width: 1199px) {
+		#one,#two{
+			display: block;
+			width: 25%;
+			height: 200px;
+			float: left;
+		}
+		#three{
+			display: block;
+			width: 25%;
+			height: 200px;
+			clear: both;
+			float: left;
+		}
+		#four{
+			display: block;
+			width: 25%;
+			height: 200px;
+			float: left;
+		}
+}
+	@media (min-width: 1200px) {
+		#one,#two,#three,#four{
+			display: block;
+			width: 20%;
+			height: 200px;
+			float: left;
+		}
+}
+	@media (max-width: 767px) {
+		#one{
+			display: block;
+			width: 40%;
+			height: 200px;
+		}
+		#two{
+			display: block;
+			width: 40%;
+			height: 200px;
+		}
+		#three{
+			display: block;
+			width: 40%;
+			height: 200px;
+		}
+		#four{
+			display: block;
+			width: 40%;
+			height: 200px;
+		}
+}
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#one{
+		background:blue;
+	}
+	#two{
+		background:gold;
+	}
+	#three{
+		background:gray;
+	}
+	#four{
+		background:green;
+	}
+	</style>
+</head>
+<body>
+	<div id="one">这是一个框</div>
+	<div id="two">这是一个框</div>
+	<div id="three">这是一个框</div>
+	<div id="four">这是一个框</div>
+</body>
+</html>
