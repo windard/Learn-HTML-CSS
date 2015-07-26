@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	#mydiv{
+		width: 100px;
+		height: 100px;
+		background-color:red;
+		-webkit-transition:width 2s;
+		transition:width 2s; 
+	}
+	#mydiv:hover{
+		width: 400px;
+	}
+	</style>
+</head>
+<body>
+	<div id="mydiv"></div>
+	<script>
+		document.getElementById("mydiv").addEventListener("transitionend", function(e){
+			this.innerHTML = "过渡事件已完成"
+		})
+	</script>
+</body>
+</html>

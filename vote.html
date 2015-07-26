@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>投票页面</title>
+	<style>
+#vote{
+	width: 80%;
+	margin: 0 auto 0;
+}
+span{
+	background: red;
+}
+#vote div{
+	float:left;
+	width: 100%;
+}
+#vote span{
+	width:70%;
+	float:left;
+}
+#vote button{
+	width: 30%;
+	float:right;
+}
+	</style>
+	<script>
+	window.onload=function(){
+           // var oDiv=document.getElementById('div1');
+           //  var aDiv=oDiv.getElementsByTagName('div');
+           //  var aBtn=document.getElementsByTagName('input');
+           //  var lNum=50;  
+           //  var rNum=25;
+           //  var lNums=(rNum/(lNum+rNum))*500;
+           //  var rNums=500-lNums;
+           //  aDiv[1].style.width=parseInt(lNums)+'px';
+           //  aDiv[0].style.width=500-parseInt(lNums)+'px';
+           //  aDiv[0].innerHTML=(lNum/(lNum+rNum)).toFixed(2);
+           //  aDiv[1].innerHTML=(1-lNum/(lNum+rNum)).toFixed(2);
+                   
+           //  aBtn[0].onclick=function()
+           //  {
+           //          lNum=lNum+1;
+           //          var lNumss=parseInt(lNum/(lNum+rNum)*500);
+           //          aDiv[0].style.width=lNumss+'px';
+           //          aDiv[1].style.width=(500-lNumss)+'px';
+           //          aDiv[0].innerHTML=(lNum/(lNum+rNum)).toFixed(2);
+           //          aDiv[1].innerHTML=(1-lNum/(lNum+rNum)).toFixed(2);
+           //  }
+           //  aBtn[1].onclick=function()
+           //  {
+           //          rNum=rNum+1;
+           //          var rNumss=parseInt(rNum/(lNum+rNum)*500);
+           //          aDiv[0].style.width=(500-rNumss)+'px';
+           //          aDiv[1].style.width=rNumss+'px';
+           //          aDiv[0].innerHTML=(lNum/(lNum+rNum)).toFixed(2);
+           //          aDiv[1].innerHTML=(1-lNum/(lNum+rNum)).toFixed(2);
+           //  }
+           var Votespan=document.getElementsByTagName('span');
+           var Votemenu=document.getElementsByTagName('button');
+           var num=new Array("120","130","140","150");
+           // var allnum=num[0]+num[1]+num[2]+num[3];
+           // var nums=new Array();
+           // var nums=(num[0]/allnum)
+           for(var i=0;i<4;i++){
+           		Votespan[i].style.width=parseInt(num[i])+'px';
+           		Votespan[i].innerHTML=parseInt(num[i]);
+           }
+           // for(var j=0;j<4;j++){
+ 		        Votemenu[0].onclick=function(){
+  				num[0]=parseInt(num[0]);
+           		num[0]=num[0]+1;
+           		// allnum++;
+           		Votespan[0].style.width=parseInt(num[0])+'px';
+           		Votespan[0].innerHTML=parseInt(num[0]);
+	           }
+           // } 
+		        Votemenu[1].onclick=function(){
+  				num[1]=parseInt(num[1]);
+           		num[1]=num[1]+1;
+           		// allnum++;
+           		Votespan[1].style.width=parseInt(num[1])+'px';
+           		Votespan[1].innerHTML=parseInt(num[1]);
+	           }
+ 		        Votemenu[2].onclick=function(){
+  				num[2]=parseInt(num[2]);
+           		num[2]=num[2]+1;
+           		// allnum++;
+           		Votespan[2].style.width=parseInt(num[2])+'px';
+           		Votespan[2].innerHTML=parseInt(num[2]);
+	           }
+ 		        Votemenu[3].onclick=function(){
+  				num[3]=parseInt(num[3]);
+           		num[3]=num[3]+1;
+           		// allnum++;
+           		Votespan[3].style.width=parseInt(num[3])+'px';
+           		Votespan[3].innerHTML=parseInt(num[3]);
+	           }
+ 
+	}
+	</script>
+</head>
+<body>
+	<div id="vote">
+		<div id="vote1"><span></span><button>投票1</button></div>
+		<div id="vote2"><span></span><button>投票2</button></div>
+		<div id="vote3"><span></span><button>投票3</button></div>
+		<div id="vote4"><span></span><button>投票4</button></div>
+	</div>
+</body>
+</html>
