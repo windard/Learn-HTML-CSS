@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>collapse</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<a href="#collapseExaple" class="btn btn-primary" data-toggle="collapse">点击查看</a>
+		<a href="#collapseExaple" class="btn btn-primary" data-toggle="collapse">另一个按钮</a>
+		<div class="collapse" id="collapseExaple">
+			<div class="well">
+				Hello
+			</div>			
+		</div>
+
+		<div class="panel-group" id="accordion" role="tablist">
+			<div class="panel panel-fefault">
+				<div class="panel-heading" role="tab" id="headingone">
+					<h4 class="panel-title">
+						<a href="#collapseone" data-toggle="collapse" class="btn btn-success" data-parent="#accordion">item1</a>
+					</h4>
+				</div>
+				<div id="collapseone" class="panel-collapse collapse in" role="tabpanel">
+					<div class="panel-body">
+						<div class="well">
+							Hello wprld
+							Hello wprld
+							Hello wprld	
+						</div>				
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-fefault">
+				<div class="panel-heading" role="tab" id="headingone">
+					<h4 class="panel-title">
+						<a href="#collapsetwo" data-toggle="collapse" class="btn btn-success" data-parent="#accordion">item1</a>
+					</h4>
+				</div>
+				<div id="collapsetwo" class="panel-collapse collapse" role="tabpanel">
+					<div class="panel-body">
+						<div class="well">
+							Hello wprld
+							Hello wprld
+							Hello wprld	
+						</div>				
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-fefault">
+				<div class="panel-heading" role="tab" id="headingone">
+					<h4 class="panel-title">
+						<a href="#collapsethree" data-toggle="collapse" class="btn btn-success" data-parent="#accordion">item1</a>
+					</h4>
+				</div>
+				<div id="collapsethree" class="panel-collapse collapse" role="tabpanel">
+					<div class="panel-body">
+						<div class="well">
+							Hello wprld
+							Hello wprld
+							Hello wprld	
+						</div>				
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+</body>
+</html>

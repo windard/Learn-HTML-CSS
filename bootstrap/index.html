@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1"> 
+	<title>后台界面</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<style>
+	.myheading{
+		background-color:#333;
+	}
+	.myfooter{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-top: 50px;
+		color:#767676;
+		text-align: center;
+		border-top: 1px solid #f1f1f1;
+	}
+	</style>
+</head>
+<body>
+	<div class="myheading">
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">
+						<img src="bdlogo.png" alt="#" style="width:75px">
+					</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">内容管理</a></li>
+						<li ><a href="#">内容分析</a></li>
+						<li ><a href="#">系统分析</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">系统维护<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">恢复系统</a></li>
+								<li><a href="#">恢复系统</a></li>
+								<li><a href="#">恢复系统</a></li>
+								<li><a href="#">恢复系统</a></li>
+								<li><a href="#">恢复系统</a></li>
+							</ul>
+						</li>
+					</ul>
+					<button type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+					<form action="#" class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="输入搜索内容">
+						</div>
+						<button type="submit" class="btn btn-default">搜索</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="mybody container">
+		<div class="row">
+			<div class="leftmenu col-md-3 col-sm-5">
+				<div class="list-group">
+					<a href="#" class="list-group-item active">访问统计</a>
+					<a href="#" class="list-group-item">访问统计</a>
+					<a href="#" class="list-group-item">访问统计</a>
+					<a href="#" class="list-group-item">访问统计</a>
+					<a href="#" class="list-group-item">访问统计</a>
+					<a href="#" class="list-group-item">访问统计</a>
+					<a href="#" class="list-group-item">访问统计</a>
+					<a href="#" class="list-group-item">访问统计</a>
+					<a href="#" class="list-group-item">访问统计</a>
+					<a href="#" class="list-group-item">访问统计</a>
+				</div>
+			</div>
+			<div class="content col-md-9 col-sm-7">
+				<ol class="breadcrumb">
+					<li><a href="#">网站后台</a></li>
+					<li><a href="#">系统分析</a></li>
+					<li class="active">网站管理</li>
+				</ol>
+				<div class="table-responsive">
+					<table class="table table-bordered table-hover">
+						<thead>
+							<tr>
+								<th>日期</th>
+								<th>访问量</th>
+								<th>热力图</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2015-3-3</td>
+								<td>10</td>
+								<td><a herf="#">详情</a></td>
+							</tr>
+							<tr>
+								<td>2015-3-3</td>
+								<td>10</td>
+								<td><a herf="#">详情</a></td>
+							</tr>
+							<tr>
+								<td>2015-3-3</td>
+								<td>10</td>
+								<td><a herf="#">详情</a></td>
+							</tr>
+							<tr>
+								<td>2015-3-3</td>
+								<td>10</td>
+								<td><a herf="#">详情</a></td>
+							</tr>
+							<tr>
+								<td>2015-3-3</td>
+								<td>10</td>
+								<td><a herf="#">详情</a></td>
+							</tr>
+							<tr>
+								<td>2015-3-3</td>
+								<td>10</td>
+								<td><a herf="#">详情</a></td>
+							</tr>
+							<tr>
+								<td>2015-3-3</td>
+								<td>10</td>
+								<td><a herf="#">详情</a></td>
+							</tr>
+							<tr>
+								<td>2015-3-3</td>
+								<td>10</td>
+								<td><a herf="#">详情</a></td>
+							</tr>
+							<tr>
+								<td>2015-3-3</td>
+								<td>10</td>
+								<td><a herf="#">详情</a></td>
+							</tr>
+						</tbody>
+					</table>
+					<nav class="pull-right">
+						<ul class="pagination">
+							<li class="disabled">
+								<a href="#" aria-label="Previous">
+									<span aria-hidden="true">&laquo;</span>
+								</a>
+							</li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li>
+								<a href="#" aria-label="Previous">
+									<span aria-hidden="true">&raquo;</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="myfooter">
+			<p>@All Right Reserved</p>
+		</div>
+	</div>
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script>
+	$(".navbar-nav a").click(function(e){
+		$(this).tab("show");
+	})
+	</script>
+</body>
+</html>
