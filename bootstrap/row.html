@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>栅格系统</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<style>
+	.row div{
+		border:2px solid #f1f1f1;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="button-group">
+			<button type="button" class="btn btn-default">Button</button>
+			<button class="btn btn-primary" type="button">Button</button>
+			<button class="btn btn-success" type="button">Button</button>
+			<button class="btn btn-warning" type="button">Button</button>
+			<button class="btn btn-info" type="button">Button</button>
+			<button class="btn btn-danger" type="button">Button</button>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				这个框是应该占大屏幕的12个格
+			</div>
+			<div class="col-md-5 col-lg-2 col-sm-1 col-xs-4">这个框是大屏幕的5个格</div>
+			<div class="col-md-3 col-lg-6 col-sm-1 col-xs-4">这个框是大屏幕的3个格</div>
+			<div class="col-md-4 col-lg-4 col-sm-10 col-xs-4">这个框是大屏幕的4个格</div>
+			<div class="col-sm-12 col-md-8 col-lg-1">这个是小屏幕的12个格</div>
+		</div>
+	</div>
+</body>
+</html>

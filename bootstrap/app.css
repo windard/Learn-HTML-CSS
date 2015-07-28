@@ -1,0 +1,188 @@
+html,body{
+	color:#505050;
+	line-height: 1.75em;
+	background:#ebebeb;
+	font-family: MicroSoft YaHei;
+}
+.main-header{
+	text-align: center;
+	padding: 42px 0;
+	background-color: #fff;
+}
+
+.main-header .branding{
+	font-size: 3.5em;
+	color: #303030;
+}
+a{
+	color: #e67e22;
+	outline: none;
+	text-decoration: none;
+}
+.main-header .branding img{
+	max-width: 100%;
+}
+a:active,a:hover,a img{
+	outline: none;
+}
+.main-navigation{
+	text-align: center;
+	background-color: #ffffff;
+	border-top:1px solid #ededed;
+	border-bottom: 3px solid #e1e1e1;
+	margin-bottom: 35px;
+}
+.main-navigation .menu{
+	padding: 0;
+	margin: 0;
+}
+.main-navigation .menu li.nav-current{
+	border-bottom: 3px solid #e67e22;
+	margin-bottom: -2px;
+}
+.main-navigation .menu li{
+	list-style: none;
+	display: inline-block;
+	position: relative;
+}
+.main-navigation .menu li a{
+	color: #505050;
+	line-height:4em;
+	display: block;
+	padding: 0 21px;
+}
+.post{
+	padding: 35px;
+	background-color: #fff;
+	margin-bottom: 35px;
+	position: relative;
+	overflow: hidden;
+}
+.post .post-head{
+	text-align: center;
+}
+.post .post-head .post-title a{
+	color: #303030;
+}
+.post .post-head .post-meta{
+	color: #959595;
+	margin: 14px 0 0 0;
+}
+.post-content{
+	font:400 18px/1.62 "MicroSoft YaHei";
+	color:#444443;
+}
+
+.post-content p{
+	margin-top: 0;
+	margin-bottom: 1.46em;
+}
+
+.btn-default{
+	border:1px solid #e67e22;
+	background-color: #e67e22;
+	color: #fff;
+	transition:all 0.2s ease-in-out;
+	-webkit-transition:all 0.2s ease-in-out;
+}
+.btn-default:hover{
+	color: #fff;
+	background-color: #000;
+}
+.widget .tag-cloud a:hover{
+	color: white;
+	text-decoration: none;
+	background-color: #e67e22;
+}
+.btn{
+	padding: 7px 14px;
+	border-radius: 2px;
+}
+.post .post-footer{
+	margin-top: 30px;
+	/*border-top: 1px solid #ebebeb;*/
+	padding: 21px 0 0 0
+}
+.post .post-footer .tag-list{
+	color:#959595;
+	line-height: 28px;
+}
+
+.slidebar .widget{
+	background-color: #fff;
+	padding: 21px 30px;
+}
+.widget{
+	margin-bottom: 35px;
+}
+.widget .title{
+	margin-top: 0px;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #ebebeb;
+	margin-bottom: 21px;
+	position: relative;
+}
+.widget .tag-cloud a{
+	border: 1px solid #ebebeb;
+	padding: 2px 7px;
+	color: #959595;
+	line-height: 1.5em;
+	display: inline-block;
+	margin: 0 7px 7px 0;
+}
+
+.main-footer{
+	background-color: #202020;
+	padding: 35px 0 0 ;
+	color: #959595;
+}
+.main-footer .widget{
+	padding: 0 30px;
+}
+.widget{
+	margin-bottom: 35px;
+}
+.main-footer .widget .title{
+	color: #fff;
+	border-bottom: 1px #303030;
+}
+
+.widget .title{
+	margin-top: 0;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #ebebeb;
+	margin-bottom: 21px;
+	position: relative;
+}
+.main-footer .widget .recent-post .recent-single-post{
+	border-bottom: 1px dashed #303030;
+}
+.widget .recent-post .recent-single-post{
+	border-bottom: 1px dashed #ebebeb;
+	padding-bottom: 14px;
+	margin-bottom: 14px;
+}
+
+.main-footer .widget .recent-post .recent-single-post .post-title{
+	color:#959595;
+}
+.widget .recent-post .recent-single-post .post-title{
+	color: #505050;
+	transition:all 0.5s;
+}
+
+.main-footer .widget .recent-post .recent-single-post .date{
+	color: #505050;
+}
+.widget .title:after{
+	content: "";
+	width: 90px;
+	height: 1px ;
+	background-color: #e67e22;
+	position: absolute;
+	left: 0;
+	bottom:-1px;
+}
+.main-footer .widget .tag-cloud a{
+	border: 1px solid #303030
+}

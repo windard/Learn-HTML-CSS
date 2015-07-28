@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点赞</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<button class="btn btn-default" type="button" value="点赞！">	
+		</button>
+		<input type="button" class="btn btn-default" value="点赞！" onclick="this.value='已赞！'">
+		<input type="button" class="btn btn-default" value="点赞！" onclick="star()" id="star-button">
+		<input type="button" class="btn btn-default" value="点赞！" onclick="star2()" id="star-button2">
+		<script>
+		function star(){
+			var BTN = document.getElementById('star-button');
+			if(BTN.value == "点赞！"){
+				BTN.value = "已赞！";
+				// BTN.setAttribute("class", "btn-default"); 
+				BTN.className = "btn-success btn";
+			}else{
+				BTN.value = "点赞！";
+				BTN.className = "btn-default btn";
+			}
+		}
+
+		function star2(){
+			var BTN2 = document.getElementById('star-button2');
+			if(BTN2.value == "点赞！"){
+				BTN2.value = "已赞！";
+				// BTN.setAttribute("class", "btn-default"); 
+				BTN2.className += 'btn-success'; 
+				BTN2.className.replace('btn-default','');
+			}else{
+				BTN2.value = "点赞！";
+				BTN2.className += 'btn-default'; 
+				BTN2.className.replace(/btn-success/,'btn-default');
+			}
+		}
+		</script>
+	</div>
+</body>
+</html>
