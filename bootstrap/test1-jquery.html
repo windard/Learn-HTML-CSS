@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test1-jQuery</title>
+	<script src="jquery-2.1.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		alert("Hello World");
+		$("p").click(function(){
+			$(this).hide();
+		});
+	});
+	</script>
+</head>
+<body>
+	<p>这是一个p元素</p>
+	<p>这是一个p元素</p>
+	<p>这是一个p元素</p>
+</body>
+</html>
