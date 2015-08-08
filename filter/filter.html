@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter(滤镜)</title>
+	<style>
+	body{
+		text-align: center;
+		padding-top: 50px;
+	}
+	img{
+		width: 500px;
+		height: 300px;
+	}
+	.blur {	
+    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    
+    -webkit-filter: blur(5px); /* Chrome, Opera */
+       -moz-filter: blur(5px);
+        -ms-filter: blur(5px);    
+            filter: blur(5px);
+    
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+}
+	</style>
+</head>
+<body>
+	<img src="1.jpg" alt="这是原图">
+	<img src="1.jpg" alt="这是滤镜之后的图" class="blur">
+</body>
+</html>
