@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 Filter的十种特效</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0
+	}
+	body{
+		padding-top: 30px;
+		text-align: center;
+	}
+	img{
+		margin: 50px;
+		width: 500px;
+		height: 300px;
+	}	
+	/*******灰度************/
+    .grayscale{ 
+    	-webkit-filter:grayscale(1);
+    }  
+    /******褐色**************/  
+    .sepia{
+          -webkit-filter:sepia(1);
+    } 
+    /******色彩饱和度***************/   
+   .saturate{
+         -webkit-filter:saturate(10);
+    }  
+    /********色相旋转**************/
+    .hue-rotate{
+        -webkit-filter:hue-rotate(180deg);
+    }
+    /********反色（类似照片底片）*******************/
+    .invert{
+        -webkit-filter:invert(1);
+    } 
+    /********透明度********************/
+    .opacity{
+        -webkit-filter:opacity(.5);
+    }  
+    /********亮度**************/
+    .brightness{
+        -webkit-filter:brightness(2);
+    } 
+    /********对比度************/
+    .contrast{
+        -webkit-filter:contrast(5);
+    } 
+    /******模糊*************/
+ 	.blur{
+        -webkit-filter:blur(3px);
+    }  
+    /*********阴影************/
+ 	.drop-shadow{
+        -webkit-filter:drop-shadow(25px 25px 25px #ccc);
+    }                            
+</style>
+<body>
+	<img src="image.jpg" alt="#" class=""><br>
+	<h1>*******灰度************</h1>
+	<img src="image.jpg" alt="#" class="grayscale"><br>
+	<h1>******褐色**************</h1>
+	<img src="image.jpg" alt="#" class="sepia"><br>
+	<h1>*******色彩饱和度************</h1>
+	<img src="image.jpg" alt="#" class="saturate"><br>
+	<h1>*******色相旋转************</h1>
+	<img src="image.jpg" alt="#" class="hue-rotate"><br>
+	<h1>*******反色（类似照片底片）************</h1>
+	<img src="image.jpg" alt="#" class="invert"><br>
+	<h1>*******透明度************</h1>
+	<img src="image.jpg" alt="#" class="opacity"><br>
+	<h1>*******亮度************</h1>
+	<img src="image.jpg" alt="#" class="brightness"><br>
+	<h1>*******对比度************</h1>
+	<img src="image.jpg" alt="#" class="contrast"><br>
+	<h1>*******模糊************</h1>
+	<img src="image.jpg" alt="#" class="blur"><br>
+	<h1>*******阴影************</h1>
+	<img src="image.jpg" alt="#" class="drop-shadow"><br>
+</body>
+</html>
