@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" type="text/css" href="./css/main-show.css">
+<link rel="stylesheet" type="text/css" href="./css/page_animation.css">
+</head>
+<style>
+	#loading-tips{
+		position: absolute;
+		left:40%;
+		top:50%;
+		font-size: 24px;
+		font-weight: bolder;
+		width: 200px;
+		height: 40px;
+		text-align: center;
+		background-color: #fff;
+		margin: -20px 0 0 -20px;
+	}
+	#loading{
+		height: 100%;
+		background-color: #97c0F6;
+		opacity: 0.4;
+		display: block;
+	}
+</style>
+<body>
+    <div class="main-show-area">
+    
+    </div>
+	<div id="loading-tips">
+		<span id="loading"></span>
+	</div>
+	
+    <script src="./js/zepto.js"></script>
+    <script src="./js/zepto.detect.js"></script>
+    <script src="./js/zepto.touch.js"></script>
+    <script src="./js/transition.js"></script>
+    <script src="./js/main_page.js"></script>
+    <script src="./js/main.js"></script>
+	<script>
+		MainPage.setResourceLoadedCallback(function(percent){
+			$('#loading-tips #loading').html(percent + '%');
+			$("#loading-tips #loading").css("width",percent + '%');
+		});
+	</script>
+</body>
+</html>
