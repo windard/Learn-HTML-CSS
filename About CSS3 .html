@@ -16,18 +16,30 @@
 		margin: 20px;
 		float: left;
 	}*/
-	div:not([id=div]){
+/*	div:not([id=div]){
 		width: 160px;
 		height: 50px;
 		margin: 20px;
 		float: left;		
-	}	
+	}*/	
+	#div div{
+		width: 160px;
+		height: 50px;
+		margin: 20px;
+		float: left;				
+	}
 	/************class选择器**************/
 	.section{
 		background-color: #888A8A;
 	}
 	[class=section1]{
 		background-color: #48c253;
+	}
+	[class~=last]{
+		background-color: #1e8357;
+	}
+	[class|=re]{
+		box-shadow: 5px 5px 5px #000;
 	}
 	/*************id选择器*************/
 	#section{
@@ -36,6 +48,25 @@
 	[id=section1]{
 		background-color: #8A50A3;
 	}
+	[id~=last]{
+		background-color: #73eaf2;
+	}
+	/*******[attribute~=value] [attribute*=value]*************
+	*
+	*前者是选择有该属性值的元素，后者是选择属性值中有该字符串的元素
+	*
+	******************************************************/
+	[id|=re]{
+		box-shadow: 5px 5px 5px #a6f923 inset;
+	}
+	/*******[attribute|=value] [attribute^=value]***********************
+	*
+	*前者是选择属性开头为该属性值的元素
+	*若选择为某个属性值，则只能有此属性值
+	*若选择为某字符串，则加上-XXX（其他字符串）
+	*后者为选择属性开头为该字符串的元素
+	*
+	********************************************************/
 	/***********css3新的选择器*************/
 	[class*=section]{
 		border: 5px solid #46A4EA;
@@ -175,6 +206,55 @@
 	[id=text1]:disabled{
 		background-color: #5cebc0;
 	}
+	form[id=mouse] input[type=text]:read-only{
+		background-color: #1b1b61;
+	}
+	form[id=mouse] input[type=text]:read-write{
+		background-color: #c27ff6;
+	}
+	form[id=computer] input[type=checkbox]:checked{
+		outline: 2px solid #adf3e5;
+	}
+	form[id=computer] input[type=checkbox]:default{
+		outline: 2px solid #7c89af;
+	}
+	/************E:default.放心，没有哪个浏览器支持*******************/
+	form[id=sex] input[type=radio]:indeterminate{
+		outline: 3px solid limegreen;
+	}
+	form[id=internet] p::selection{
+		background-color: #76e02d;
+		color:#b92429;
+	}
+	form[id=internet] input[type=text]::selection{
+		background-color: gray;
+	}
+	/**************css3中新的选择器***************************/
+	[id=food]>p{
+		background-color: #acd32f;
+	}
+	/*******************************************
+	*
+	*element element	div p	选择 <div> 元素内部的所有 <p> 元素。
+	*element>element	div>p	选择父元素为 <div> 元素的所有 <p> 元素。
+	*
+	*********************************************/
+	[id=life] div+p{
+		background-color: #18f5b0;
+	}
+	/**********************************************
+	*
+	*element+element	div+p	选择紧接在 <div> 元素之后的每个<p> 元素。
+	*
+	***************************************************/
+	[id=poem] div~p{
+		background-color: #d4b66f;
+	}
+	/******************************************************
+	*
+	*element1~element2	p~ul	选择前面有 <p> 元素的 所有 <ul> 元素。
+	*
+	****************************************************************/
 	</style>
 </head>
 <body>
@@ -184,15 +264,15 @@
 		<div class="section1">Hello World</div>
 		<div class="section2">Hello World</div>
 		<div class="resection"></div>
-		<div class="resect">Hello World</div>
-		<div class="action">Hello World</div>
+		<div class="re-sect resect">Hello World</div>
+		<div class="action last">Hello World</div>
 		<br><br><br><br><br><br><br>
 		<div id="section">Hello World</div>
 		<div id="section1">Hello World</div>
 		<div id="section2">Hello World</div>
 		<div id="resection"></div>
-		<div id="resect">Hello World</div>
-		<div id="action">Hello World</div>
+		<div id="re-sect resect">Hello World</div>
+		<div id="action last">Hello World</div>
 		<br><br><br><br><br><br><br>		
 	</div>
 	<a href="###">This is a link</a>
@@ -372,9 +452,73 @@
 	}
 	</script>
 	<br><br><br><br>
-	<form action="#">
-		
+	<form action="#" id="mouse">
+		<label for="#">Name&nbsp;</label>
+		<input type="text" name="name">
+		<br>
+		<label for="#">Adress</label>
+		<input type="text" name="adress" value="Read-only" readonly="readonly">
 	</form>
-	<a href="#div">回到顶部</a>
+	<br><br><br><br>
+	<form action="#" id="computer">
+		<label for="#">Hobby</label>
+		<br>
+		<input type="checkbox" checked>Read
+		<input type="checkbox">Music
+		<input type="checkbox">Movie
+		<input type="checkbox">Travel
+	</form>	
+	<br><br><br><br>
+	<form action="#" id="sex">
+		<label for="#">性别</label>
+		<br>
+		<input type="radio" name="radio" value="male">Male
+		<input type="radio" name="radio" value="female">Female
+	</form>
+	<br><br><br><br>
+	<form action="#" id="internet">
+		<p>This is an article for test ,and it works</p>
+		<input type="text" value="name" name="name">
+		<h1>This is h1 </h1>
+	</form>
+	<br><br><br><br>
+	<div id="food">
+		<div>
+			<p>This is a P selector</p>
+			<p>This is a P selector</p>
+		</div>
+		<br>
+		<p>This is a P selector</p>
+		<p>This is a P selector</p>
+		<br>
+		<div>This is a Div selector</div>
+		<br>
+	</div>
+	<br><br><br><br>
+	<div id="life">
+		<div>
+			<p>This is a P selector</p>
+			<p>This is a P selector</p>
+		</div>
+		<p>This is a P selector</p>
+		<p>This is a P selector</p>
+		<br>
+		<div>This is a Div selector</div>
+		<p>This is a P selectior</p>
+		<br>
+	</div>	
+	<br><br><br><br>
+	<div id="poem">
+		<div>
+			<p>This is a P selector</p>
+			<p>This is a P selector</p>
+		</div>
+		<p>This is a P selector</p>
+		<p>This is a P selector</p>
+		<br>
+		<div>This is a Div selector</div>
+		<p>This is a P selectior</p>
+		<br>
+	</div>		<a href="#div">回到顶部</a>
 </body>
 </html>
