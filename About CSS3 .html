@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css 选择器</title>
+	<style>
+	/******通配选择器*********/
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	/***********元素选择器*************/
+/*	div{
+		width: 160px;
+		height: 50px;
+		margin: 20px;
+		float: left;
+	}*/
+	div:not([id=div]){
+		width: 160px;
+		height: 50px;
+		margin: 20px;
+		float: left;		
+	}	
+	/************class选择器**************/
+	.section{
+		background-color: #888A8A;
+	}
+	[class=section1]{
+		background-color: #48c253;
+	}
+	/*************id选择器*************/
+	#section{
+		background-color: #97c0F6;
+	}
+	[id=section1]{
+		background-color: #8A50A3;
+	}
+	/***********css3新的选择器*************/
+	[class*=section]{
+		border: 5px solid #46A4EA;
+	}
+	[class^=re]{
+		color: #FF751B;
+	}
+	[class$=tion]{
+		border-radius: 10px;
+	}
+	[id*=section]{
+		border:5px solid #FFF88D;
+	}
+	[id^=re]{
+		color: #b3e525;
+	}
+	[id$=tion]{
+		border-radius: 10px;
+	}
+	/*********伪类选择器*************/
+	a:link{
+		color:black;
+	}
+	a:visited{
+		color:red;
+		text-decoration: none;				
+	}
+	a:hover{
+		color:orange;
+		text-decoration: none;
+	}	
+	a:active{
+		color:pink;
+	}
+	/********css3伪类选择器************/
+	p:first-line{
+		font-weight: bolder;
+		color:#FF751B;
+	}
+	p:first-letter{
+		color:#588ece;
+		font-size: 24px;
+	}
+	[href$=html]:after,[href$=\#]:after,[href$=htm]:after{
+		content:"可以看出来这是一个链接";
+		color:green;
+	}
+	ul li:before{
+		content:"#<a href='###'>Hello World</a>";
+	}
+	ul li:after{
+		content:"\00A0 \2014";
+	}
+	.movie li:after{
+		content:"(Just For Test)";
+		font-size: 12px;
+		color:red;
+	}
+	/**************css3新的选择器********************/
+	:root{
+		background-color: #f1f1f1;
+	}
+	[class*=ct]:not([class*=section]){
+		border:5px solid #a22e4d;
+	}
+	[id*=ct]:not([id*=section]){
+		border:5px solid #d01626;
+	}
+	[class]:empty{
+		background-color: #a308de;
+	}
+	[id]:empty{
+		background-color: #fbe81e;
+	}
+	:target{
+		background-color: #2a7094;
+	}
+	/**********css3新的伪类******************/
+	[id=food] li:first-child{
+		background-color: #f37a6f;
+	}
+	[id=food] li:last-child{
+		background-color: #a8e21e;
+	}
+	[id=food] li:nth-child(3){
+		background-color: #ed06ef;
+	}
+	[id=food] li:nth-last-child(3){
+		background-color: #1a9660;
+	}
+	/*****正数下来第偶数个*************/
+	[id=water] li:nth-child(even){
+		background-color: #f13f7f;
+	}
+	/*********倒数下来第奇数个*********/
+	[id=water] li:nth-last-child(odd){
+		background-color: #63f962;
+	}
+	/********正数下来第奇数个h2标签***********/
+	[id=chair] h2:nth-of-type(odd){
+		background-color: yellow;
+	}
+	[id=chair] h2:nth-of-type(even){
+		background-color: skyblue;
+	}
+	/**********正数下来第奇数个标签切且是h2*******************/
+	[id=desk] h2:nth-child(odd){
+		background-color: #420ebe;
+	}
+	/*************循环使用样式**************/
+	[id=cup] li:nth-child(3n+1){
+		background-color: #550819;
+	}
+	[id=cup] li:nth-child(3n+2){
+		background-color: #535e4c;
+	}
+	[id=cup] li:nth-child(3n+3){
+		background-color: #a5e2ad;
+	}
+	/*************某个父元素中只有一个子元素*******************/
+	li:only-child{
+		background-color: #7bc967;
+	}
+	/**********css3中新的伪类*******************/
+	input[type=text]:hover{
+		background-color: #b2c382;
+	}
+	input[type=text]:focus{
+		background-color: #19f7f1;
+	}
+	input[type=text]:active{
+		background-color: #8d860e;
+	}
+	[id=text1]:enabled{
+		background-color: #d7475f;
+	}
+	[id=text1]:disabled{
+		background-color: #5cebc0;
+	}
+	</style>
+</head>
+<body>
+	<a href="#desk">回到底部</a>
+	<div id="div">
+		<div class="section">Hello World</div>
+		<div class="section1">Hello World</div>
+		<div class="section2">Hello World</div>
+		<div class="resection"></div>
+		<div class="resect">Hello World</div>
+		<div class="action">Hello World</div>
+		<br><br><br><br><br><br><br>
+		<div id="section">Hello World</div>
+		<div id="section1">Hello World</div>
+		<div id="section2">Hello World</div>
+		<div id="resection"></div>
+		<div id="resect">Hello World</div>
+		<div id="action">Hello World</div>
+		<br><br><br><br><br><br><br>		
+	</div>
+	<a href="###">This is a link</a>
+	<br><br>
+	<a href="###.html">This is an other link</a>
+	<br><br>
+	<a href="###.html">This is an other link,too</a>
+	<br><br><br><br>
+	<p>
+		毫无疑问这是第一行
+		<br>
+		明显可以看到这是第二行 
+	</p>	
+	<br><br>
+	<p>
+		This is the first line
+		<br>
+		This is the second line 
+	</p>
+	<br><br><br><br>
+	<ul>
+		<li>This is a list</li>
+		<li>This is a list</li>
+		<li>This is a list</li>
+		<li>This is a list</li>
+	</ul>
+	<br><br><br><br>
+	<ul class="movie" id="movie">
+		<li>This is another list</li>
+		<li>This is another list</li>
+		<li>This is another list</li>
+		<li>This is another list</li>
+	</ul>	
+	<br><br><br><br>
+	<ul id="food">
+		<li>This is another list,too</li>
+		<li>This is another list,too</li>
+		<li>This is another list,too</li>
+		<li>This is another list,too</li>
+		<li>This is another list,too</li>
+		<li>This is another list,too</li>
+		<li>This is another list,too</li>
+	</ul>
+	<br><br><br><br>
+	<ul id="water">
+		<li>This is another list,too</li>
+		<li>This is another list,too</li>
+		<li>This is another list,too</li>
+		<li>This is another list,too</li>
+		<li>This is another list,too</li>
+		<li>This is another list,too</li>
+		<li>This is another list,too</li>
+	</ul>	
+	<br><br><br><br>
+	<article id="chair">
+		<h2>文章标题</h2>
+		<p>这是文章内容，虽然有点少，但是它毫无疑问是一个文章，而且这是第一篇文章，第一篇奇数次文章
+		</p>
+		<br>
+		<br>
+		<br>
+		<h2>文章标题</h2>
+		<p>这也是文章内容，一样的非常少，也不要奇怪了，因为这只是作为一个测试的而已。所以这里只有一点点内容，这是第一篇偶数次文章
+		</p>
+		<br>
+		<br>
+		<br>
+		<h2>文章标题</h2>
+		<p>这是文章内容，虽然有点少，但是它毫无疑问是一个文章，而且这是第X篇文章，第X篇奇数次文章
+		</p>
+		<br>
+		<br>
+		<br>	
+		<h2>文章标题</h2>
+		<p>这也是文章内容，一样的非常少，也不要奇怪了，因为这只是作为一个测试的而已。所以这里只有一点点内容，这是第X篇偶数次文章
+		</p>
+		<br>
+		<br>
+		<br>	
+		<h2>文章标题</h2>
+		<p>这是文章内容，虽然有点少，但是它毫无疑问是一个文章，而且这是第X篇文章，第X篇奇数次文章
+		</p>
+		<br>
+		<br>
+		<br>
+		<h2>文章标题</h2>
+		<p>这也是文章内容，一样的非常少，也不要奇怪了，因为这只是作为一个测试的而已。所以这里只有一点点内容，这是第X篇偶数次文章
+		</p><br><br><br>							
+	</article>
+	<br><br><br><br>
+	<article id="desk">
+		<h2>文章标题</h2>
+		<p>这是文章内容，虽然有点少，但是它毫无疑问是一个文章，而且这是第一篇文章，第一篇奇数次文章
+		</p>
+		<br>
+		<br>
+		<br>
+		<h2>文章标题</h2>
+		<p>这也是文章内容，一样的非常少，也不要奇怪了，因为这只是作为一个测试的而已。所以这里只有一点点内容，这是第一篇偶数次文章
+		</p>
+		<br>
+		<br>
+		<br>
+		<h2>文章标题</h2>
+		<p>这是文章内容，虽然有点少，但是它毫无疑问是一个文章，而且这是第X篇文章，第X篇奇数次文章
+		</p>
+		<br>
+		<br>
+		<br>	
+		<h2>文章标题</h2>
+		<p>这也是文章内容，一样的非常少，也不要奇怪了，因为这只是作为一个测试的而已。所以这里只有一点点内容，这是第X篇偶数次文章
+		</p>
+		<br>
+		<br>
+		<br>	
+		<h2>文章标题</h2>
+		<p>这是文章内容，虽然有点少，但是它毫无疑问是一个文章，而且这是第X篇文章，第X篇奇数次文章
+		</p>
+		<br>
+		<br>
+		<br>
+		<h2>文章标题</h2>
+		<p>这也是文章内容，一样的非常少，也不要奇怪了，因为这只是作为一个测试的而已。所以这里只有一点点内容，这是第X篇偶数次文章
+		</p><br><br><br>							
+	</article>
+	<br><br><br><br>
+	<ul id="cup">
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+		<li>This is a cup list</li>
+	</ul>
+	<br><br><br><br>
+	<ul>
+		<li>This is a list which only has one li</li>
+	</ul>
+	<br><br><br><br>
+	<form action="#">
+		<label for="#">姓名</label>
+		<input type="text" holderplace="Your Name">
+		<br>
+		<label for="#">密码</label>
+		<input type="password" holderplace="Your Password">
+		<br>
+		<input type="radio" id="radio1" name="radio" onchange="radioChange();">可用
+		<input type="radio" id="radio2" name="radio" onchange="radioChange();">不可用
+		<br>
+		<input type="text" id="text1" disabled>
+		<br>
+		<input type="password" id="password1">
+	</form>
+	<script>
+	function radioChange(){
+		var radio = document.getElementById("radio1");
+		var text  = document.getElementById("text1");
+		var password = document.getElementById("password1");
+		if(radio.checked){
+			text.value = "现在可用了";
+			text.disabled = "";
+			password.type = "text";
+		}else{
+			text.value = "现在不可用";
+			text.disabled = "disabled";
+			password.type = "password";
+		}
+	}
+	</script>
+	<br><br><br><br>
+	<form action="#">
+		
+	</form>
+	<a href="#div">回到顶部</a>
+</body>
+</html>
