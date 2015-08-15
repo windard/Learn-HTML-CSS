@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css 选择器</title>
+<style> 
+body
+{
+margin:30px;
+background-color:#E9E9E9;
+}
+
+div.polaroid
+{
+width:294px;
+padding:10px 10px 20px 10px;
+border:1px solid #BFBFBF;
+background-color:white;
+/* Add box-shadow */
+box-shadow:2px 2px 3px #aaaaaa;
+}
+
+div.rotate_left
+{
+float:left;
+-ms-transform:rotate(7deg); /* IE 9 */
+-moz-transform:rotate(7deg); /* Firefox */
+-webkit-transform:rotate(7deg); /* Safari and Chrome */
+-o-transform:rotate(7deg); /* Opera */
+transform:rotate(7deg);
+}
+
+div.rotate_right
+{
+float:left;
+-ms-transform:rotate(-8deg); /* IE 9 */
+-moz-transform:rotate(-8deg); /* Firefox */
+-webkit-transform:rotate(-8deg); /* Safari and Chrome */
+-o-transform:rotate(-8deg); /* Opera */
+transform:rotate(-8deg);
+}
+</style>
+</head>
+<body>
+
+<div class="polaroid rotate_left">
+<img src="sky.jpg" alt="Sky And City" width="284px" height="213px" />
+<p class="caption">This is The Last Day ,beautiful sky and city</p>
+</div>
+
+<div class="polaroid rotate_right">
+<img src="school.png" alt="School" width="284px" height="213px" />
+<p class="caption">This is Xidian University ,it's my school</p>
+</div>
+
+<div class="polaroid rotate_left">
+<img src="sky.jpg" alt="Sky And City" width="284px" height="213px" />
+<p class="caption">This is The Last Day ,beautiful sky and city</p>
+</div>
+
+<div class="polaroid rotate_left">
+<img src="sky.jpg" alt="Sky And City" width="284px" height="213px" />
+<p class="caption">This is The Last Day ,beautiful sky and city</p>
+</div>
+
+<div class="polaroid rotate_right">
+<img src="school.png" alt="School" width="284px" height="213px" />
+<p class="caption">This is Xidian University ,it's my school</p>
+</div>
+
+<div class="polaroid rotate_left">
+<img src="sky.jpg" alt="Sky And City" width="284px" height="213px" />
+<p class="caption">This is The Last Day ,beautiful sky and city</p>
+</div>
+
+<div class="polaroid rotate_right">
+<img src="school.png" alt="School" width="284px" height="213px" />
+<p class="caption">This is Xidian University ,it's my school</p>
+</div>
+
+<div class="polaroid rotate_right">
+<img src="school.png" alt="School" width="284px" height="213px" />
+<p class="caption">This is Xidian University ,it's my school</p>
+</div>
+
+</body>
+</html>
