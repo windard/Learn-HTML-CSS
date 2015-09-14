@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+ <textarea style="width:1325px;height:700px">
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clear-Float</title>
+<style>
+.div1,.div4,.div9,.div10,.div11{
+border:2px solid #c3b4db;
+margin: 10px;
+}
+.div4{
+float: left;
+}
+.div9{
+overflow: hidden;
+}
+.div11:after{
+content:"020";
+display: block;
+height: 0;
+clear:both;
+}
+.div2,.div5{
+width: 200px;
+height: 200px;
+background-color: #6dcaeb;
+}
+.div5{
+float: left;
+}
+.div3,.div6,.div8{
+width: 200px;
+height: 200px;
+background-color: #ec8493;
+}
+.div6{
+float: right;
+}
+.div7{
+width: 200px;
+height: 200px;
+background-color: #e8fd89;
+float: left;
+}
+.div8{
+clear:both;
+}
+.clear{
+clear: both;
+}
+</style>
+</head>
+<body>
+<div class="div1">
+<div class="div2"></div>
+如果这里有字呢？
+<div class="div3"></div>
+</div>
+<div class="div4">
+<div class="div5"></div>
+如果这里有字呢？
+<div class="div6"></div>
+<div class="div7"></div>
+</div>
+<div class="div8"></div>
+如果这里有字呢？
+<div class="div9">
+<div class="div5"></div>
+如果这里有字呢？
+<div class="div6"></div>
+<div class="div7"></div>
+</div>
+<div class="div8"></div>
+<div class="div10">
+<div class="div5"></div>
+<div class="div6"></div>
+<div class="div7"></div>
+<div class="clear"></div>
+</div>
+<div class="div8"></div>
+<div class="div11">
+<div class="div5"></div>
+<div class="div6"></div>
+<div class="div7"></div>
+</div>
+<div class="div8"></div>
+ 
+</body>
+</html>	
+
+</textarea>
+
+</body>
+</html>

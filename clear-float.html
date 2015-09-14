@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clear-Float</title>
+	<style>
+	/*
+	*
+	*默认情况下div的宽度是占父级元素宽度百分之百的
+	*如果你给它设置了宽度才有相应的宽度
+	*但是他们各自加上margin的宽度之后还是百分之百
+	*即便是前后加上了不同的标记
+	*div还是在占据着父元素百分之百的宽度
+	*也就是说
+	*无论是两个div在一起
+	*还是div后面加上其他的内容
+	*都是上下并列
+	*不会左右并列
+	*这个时候就需要用到了浮动（float）
+	*但是这个时候新的问题就出现了
+	*父级元素由于子元素已经浮动出去了
+	*就会因为空缺而高度变为0
+	*解决方法：
+	*1.0
+	*给父级元素也加上float:left
+	*父级元素就会包裹子级元素
+	*那么父级元素的大小就会和子元素加起来的大小一致
+	*父元素的下一个非块型元素就会按顺序排列
+	*但是下一个块型元素就会排在这个腹肌元素的下面
+	*此时，即需下一个块型元素设置清除浮动
+	*2.0
+	*给父级元素加上overflow:hidden
+	*全部都回归正常
+	父级元素就会包含自己元素
+	*父级元素的大小还是占据父级元素的父级元素的百分之百
+	*父级元素的下一个元素也会正常排列
+	*3.0
+	*在父级元素内，已经浮动的子元素后加上清除浮动的div
+	*效果与overflow：hidden的效果一致，完全恢复正常
+	*用来清除浮动的div只有宽度没有高度
+	*没有其他任何属性，不会显示出来
+	*唯一的作用是让它的几个浮动出去的兄弟元素重新回到父元素里面
+	*父级元素的下一个元素也会正常排列
+	*4.0
+	*给父级元素使用:after伪类
+	*效果与overflow：hidden的效果一致，完全恢复正常
+	*其实如果你知道:after伪类的作用的话就明白
+	*after伪类其实就是在该元素内的后面加上一定的内容
+	*而我们加上的也其实就是一个清除浮动的div
+	*其实实质上与前一种方法一致
+	*
+	*/
+	.div1,.div4,.div9,.div10,.div11{
+		border:2px solid #c3b4db;
+		margin: 10px;
+	}
+	.div4{
+		float: left;
+	}
+	.div9{
+		overflow: hidden;
+	}
+	.div11:after{
+		content:"020";
+		display: block;
+		height: 0;
+		clear:both;
+	}
+	.div2,.div5{
+		width: 200px;
+		height: 200px;
+		background-color: #6dcaeb;
+	}
+	.div5{
+		float: left;
+	}
+	.div3,.div6,.div8{
+		width: 200px;
+		height: 200px;
+		background-color: #ec8493;
+	}
+	.div6{
+		float: right;
+	}
+	.div7{
+		width: 200px;
+		height: 200px;
+		background-color: #e8fd89;
+		float: left;
+	}
+	.div8{
+		clear:both;
+	}
+	.clear{
+		clear: both;
+	}
+	</style>
+</head>
+<body>
+	<div class="div1">
+		<div class="div2"></div>
+		如果这里有字呢？
+		<div class="div3"></div>
+	</div>
+	<div class="div4">
+		<div class="div5"></div>
+		如果这里有字呢？
+		<div class="div6"></div>
+		<div class="div7"></div>
+	</div>
+	<div class="div8"></div>
+	如果这里有字呢？
+	<div class="div9">
+		<div class="div5"></div>
+		如果这里有字呢？
+		<div class="div6"></div>
+		<div class="div7"></div>
+	</div>	
+	<div class="div8"></div>
+	<div class="div10">
+		<div class="div5"></div>
+		<div class="div6"></div>
+		<div class="div7"></div>
+		<div class="clear"></div>
+	</div>	
+	<div class="div8"></div>
+	<div class="div11">
+		<div class="div5"></div>
+		<div class="div6"></div>
+		<div class="div7"></div>
+	</div>
+	<div class="div8"></div>
+
+</body>
+</html>
