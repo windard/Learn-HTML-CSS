@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gradient</title>
+	<style>
+	div{
+		width: 400px;
+		height: 150px;
+		margin: 50px auto 0;
+	}
+	/*
+	*
+	*无论是使用background还是background-image都可以使用色彩渐变
+	*
+	*/
+	.div{
+		background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+	}
+	/*
+	*
+	*默认从上到下，两个参数即可
+	*
+	*/
+	.box{
+		background-image: linear-gradient(#000,#fff);
+	}
+	/*
+	*
+	*第一个参数to 表示前往哪个方向
+	*
+	*/
+	.haha{
+		background: linear-gradient(to top left,#000,#fff);
+	}
+	/*
+	*
+	*每一种颜色都可以设定起始位置，设定起始位置之后就会像两边扩散
+	*
+	*/	
+	.hehe{
+		background-image: linear-gradient(#000,#fff 20%,#000 80%);		
+	}
+	/*
+	*
+	*径向渐变与线性渐变的用法基本一致。
+	*
+	*/
+	.sun{
+		background:radial-gradient(#f00,#ff0,#080);		
+	}
+	/*
+	*
+	*
+	*
+	*/
+	.one{
+		background:radial-gradient(circle,#f00 0%,#ff0 50%,#080 100%);
+	}
+	/*
+	*
+	*也与线性渐变一致，可以指定开始位置，然后向两边扩散
+	*
+	*/
+	.two{
+		background:radial-gradient(circle,#f00 0%,#ff0 20%,#080 100%);		
+	}
+	/*
+	*
+	*带前缀与不带前缀的差别还是很大的,有很多效果不知道是什么情况，还是要加前缀才能实现。
+	*
+	*/
+	.three{
+		background:-webkit-radial-gradient(center center,circle,#f00 0%,#ff0 50%,#080 100%);
+	}
+	.four{
+		background:-webkit-radial-gradient(circle contain,#f00,#ff0,#080)		
+	}
+	.five{
+		background-image: -webkit-radial-gradient(left top,cover,#f00 20%,#ff0 50%,#080 80%)		
+	}
+	.six{
+		background: -webkit-radial-gradient(90% 50px,closest-side,#f00,#ff0,#080)
+	}
+	.seven{
+		background:radial-gradient(at 100px 20px,#f00 0%,#ff0 20%,#080 100%);
+	}
+	.radial{
+	    display:block; 
+	    width:150px; 
+	    height:150px; 
+	    border:1px solid blue; 
+	    background-image:-webkit-gradient(radial, 45 45, 10, 52 50, 30, from(#A7D30C), to(rgba(1,159,98,0)), color-stop(90%, #019F62)), 
+	        -webkit-gradient(radial, 105 105, 20, 112 120, 50, from(#ff5f98), to(rgba(255,1,136,0)), color-stop(75%, #ff0188)), 
+	        -webkit-gradient(radial, 95 15, 15, 102 20, 40, from(#00c9ff), to(rgba(0,201,255,0)), color-stop(80%, #00b5e2)), 
+	        -webkit-gradient(radial, 0 150, 50, 0 140, 90, from(#f4f201), to(rgba(228, 199,0,0)), color-stop(80%, #e4c700));
+	}
+	.egg{
+	    width:100px;height:100px;border-radius:50px;
+	    background:radial-gradient(at 35px 35px,#FFF,#CCC,#FFF);
+	    /*background:-webkit-radial-gradient(35px 35px,#FFF,#CCC,#FFF);*/
+
+	}
+	</style>
+</head>
+<body>
+	<div class="egg"></div>
+	<div class="div"></div>
+	<div class="box"></div>
+	<div class="haha"></div>
+	<div class="hehe"></div>
+	<div class="sun"></div>
+	<div class="one"></div>
+	<div class="two"></div>
+	<div class="three"></div>
+	<div class="four"></div>
+	<div class="five"></div>
+	<div class="six"></div>
+	<div class="seven"></div>
+	<div class="radial"></div>	
+</body>
+</html>
