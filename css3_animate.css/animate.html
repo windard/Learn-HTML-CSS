@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animate</title>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script>
+	// $(document).ready(function(){
+	// 	$(".box").click(function(){
+	// 		$(this).animate({
+	// 			'width': 0,
+	// 			'height': 0,},
+	// 			'slow', function() {
+	// 			$(this).hide();
+	// 		});
+	// 		$(".hidden").show();
+	// 	})
+	// })
+	</script>
+	<style>
+	*{
+		padding:0;
+		margin:0;
+	}
+	.hidden{
+		text-align: center;
+		line-height: 380px;
+		font-size: 18px;
+		font-family: MicroSoft YaHei;
+		font-weight: bold;
+		width:400px;
+		height: 400px;
+		position: fixed;
+		cursor:pointer ;
+		top: 0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:auto;
+		background-color: #fff;
+		box-shadow: 0 0 10px #ccc;
+		display: none;
+	}
+	.box{
+		text-align: center;
+		line-height: 180px;
+		font-size: 18px;
+		font-family: MicroSoft YaHei;
+		font-weight: bold;
+		width:200px;
+		height: 200px;
+		position: fixed;
+		cursor:pointer ;
+		top: 0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:auto;
+		background-color: #fff;
+		box-shadow: 0 0 10px #ccc;
+		transition:all 0.5s ease-in-out;
+		animation:action .2s ease-in-out;		
+	}
+	@keyframes action{
+		0%{width:0;height:0;}
+		100%{width:200px;height:200px;}
+	}	
+	.box:hover{
+		box-shadow: 0 0 40px #ccc;
+	}
+	.wamp{
+		width:100%;
+		height:100%;
+		position: fixed;
+		background-color: #ccc;
+		opacity: .7;
+	}
+	.loading1{
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		position:fixed;
+		margin:auto;
+		width:50px;
+		height:50px;
+		border-radius: 50%;
+		background-color: #000;
+		animation:loading1 1.2s ease-in-out infinite;				
+	}
+	@keyframes loading1{
+		0%{width:0;height:0;}
+		50%{width:50px;height:50px;}
+		100%{width:0;height:0;}
+	}
+	.loading2{
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		position:fixed;
+		margin:auto;
+		width:50px;
+		height:50px;
+		border-radius: 50%;
+		background-color: #fff;
+		animation:loading2 1.2s ease-in-out infinite;				
+	}
+	@keyframes loading2{
+		0%{width:50px;height:50px;}
+		50%{width:0px;height:0px;}
+		100%{width:50px;height:50px;}
+	}	
+	.active{
+		width:100%;
+		height:100%;
+		position: fixed;
+		background-color: #fff;
+	}
+	</style>
+</head>
+<body>
+	<div class="wamp">
+		<div class="loading1"></div>
+		<div class="loading2"></div>
+	</div>
+	<div class="active">
+			<div class="box">Touch Me</div>
+		<div class="hidden">You Can't See Me</div>
+	</div>
+</body>
+</html>
