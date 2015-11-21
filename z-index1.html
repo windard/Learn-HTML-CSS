@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>line-mid-character</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			background: black;
+			font-family: "Microsoft YaHei";
+		}
+		.container{
+			position: relative;
+			width: 60%;
+			margin: 150px auto;
+		}
+		.container p::after{
+			/*比span的值小即可*/
+			z-index: 0;
+			top: 10px;
+			left: 0;
+			right: 0;
+			/*决定线条粗细*/
+			height: 2px;
+			/*内容为空*/
+			content: "";
+			/*绝对定位使伪元素处于正下方*/
+			position: absolute;
+			background-color: #f3f3f3;
+		}
+		.line{
+			text-align: center;
+		}
+		.line span{
+			padding: 0 10px;
+			position: relative;
+			z-index: 1;
+			color: #a3a3a3;
+			/*需要和背景色一致*/
+			background: black;	
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p class="line">
+			<span>我在上面</span>
+		</p>
+	</div>
+</body>
+</html>
