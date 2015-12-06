@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Markdown</title>
+	<script src="showdown.min.js"></script>
+	<script>
+	window.onload = function(){
+		// alert("hello");
+		// console.log(document.getElementsByClassName("one").innerText());
+		// alert(document.getElementsByClassName("one").innerHTML);
+		var converter = new showdown.Converter(),
+    	text = document.getElementById("test").innerHTML,
+    	html = converter.makeHtml(text);
+		// console.log(html);
+		document.getElementById("res").innerHTML=html;
+
+		document.getElementById("text").oninput = function(){
+			thing = document.getElementById("text").value;
+			result = converter.makeHtml(thing);
+			document.getElementById("result").innerHTML=result;
+		}
+	}
+
+	</script>
+</head>
+<body>
+	<div class="one" id="test">
+#This is something.
+
+- yiji
+- erji
+
+1. hehe
+2. hehe
+3. hehe
+
+*what fuck*
+
+**strong!**
+
+[http://www.google.com](http://www.google.com)
+
+	</div>
+	<div class="res" id="res">
+		
+	</div>
+	<textarea name="name" id="text" cols="30" rows="10"></textarea>
+	<!-- <textarea name="result" id="result" cols="30" rows="10"></textarea> -->
+	<div class="result" id="result">
+	</div>
+</body>
+</html>

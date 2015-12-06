@@ -1,9 +1,3 @@
----
-layout: post
-title: 两道前端的题目
-category: project
-description: 网上看到的自己写了一下，还是蛮好玩的。
----
 
 ##据说是前端笔试的题目，我也来试下。 
 
