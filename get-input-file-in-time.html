@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Textarea</title>
+	<script>
+	window.onload = function(){
+		document.getElementById("text").oninput = function(){
+			result = document.getElementById("text").value;
+			document.getElementById("result").value=result;
+		}
+	}
+
+	</script>
+</head>
+<body>
+	<div>
+		<textarea name="name" id="text" cols="30" rows="10"></textarea>
+		<textarea name="result" id="result" cols="30" rows="10"></textarea>
+	</div>
+</body>
+</html>
