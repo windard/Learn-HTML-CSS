@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HighStock</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+  <div class='container' style="margin-top:100px;">
+    <div class="container-fluid">
+    <div id='content' class='row'>
+      <div class="main container-fluid" style="height:400px;">
+
+      </div>
+    </div>
+    </div>
+  </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  <script src="js/highstock.js"></script>
+  <script src="http://cdn.hcharts.cn/highstock/modules/exporting.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".main").highcharts({
+        chart: {
+            type:'column'
+        },
+        title: {
+            text:'My First Cloumn Chart'
+        },
+        xAxis: {
+            categories:['one','two','three','four','five']
+        },
+        yAxis: {
+            title: {
+                text: "Some Thing Should Be Here"
+            }
+        },
+        series:[
+        {
+            name:'John',
+            data:[1,2,3,4,5]
+        },
+        {
+            name:'Mary',
+            data:[1,2,4,6,1]
+        },
+        {
+            name:'Test',
+            data:[2,3,4,1,7]
+        },
+        {
+            name:'Jone',
+            data:[2,3,5,7,10]
+        }]
+      });
+    });
+  </script>
+  </body>
+</html>
