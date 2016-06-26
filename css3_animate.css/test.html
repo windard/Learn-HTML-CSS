@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TEST</title>
+	<link rel="stylesheet" href="animate.min.css">
+	<script src="jquery-1.8.3.min.js"></script>
+	<style>
+	*{
+		padding: 0;
+		margin:0;
+		font-family:"MicroSoft YaHei", Arial, "Helvetica Neue", Helvetica, sans-serif;
+		font-size: 16px;
+	}
+	.ani{
+		text-align: center;
+		margin-top: 100px;
+	}
+	</style>
+	<script>
+	$(document).ready(function(){
+		$(".ani p").addClass('animated shake');
+		setTimeout(function(){
+			$(".ani p").removeClass("animated shake");
+		}, 3000);
+	})
+	</script>
+</head>
+<body>	
+	<div class="ani">
+		<p>Dear Baby Qingqing</p>
+	</div>
+</body>
+</html>
