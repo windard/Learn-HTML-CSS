@@ -1,0 +1,196 @@
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+button {
+height: 100px;
+width: 50px;
+color: red;
+background:yellow; }
+p 
+{
+font-family: 'Tangerine', serif; font-size: 20px; color:red;background: yellow; 
+}
+</style>
+<title>每个人都是涂鸦个艺术家。</title>
+<script type="text/javascript">
+var judge=1;
+var rand = {};
+rand.get = function (begin,end){
+return Math.floor(Math.random()*(end-begin))+begin;
+}
+//定义颜色
+function getRandomColor(){ 
+return "#"+("00000"+((Math.random()*16777215+0.5)>>0).toString(16)).slice(-6); 
+} 
+function printfpath()
+{
+style1();	
+
+
+}
+
+function style1(){
+var c=document.getElementById("canvas");
+var ctx=c.getContext("2d");
+ctx.lineWidth="5";
+for (var i=0;i<19;i++){
+
+ctx.beginPath();
+ctx.strokeStyle=getRandomColor(); 
+ctx.moveTo(rand.get(0,540),rand.get(0,540));
+ctx.lineTo(rand.get(0,540),rand.get(0,540));
+ctx.stroke(); // 进行绘制
+}
+for (var i=0;i<19;i++){
+
+ctx.beginPath();
+ctx.strokeStyle=getRandomColor(); 
+ctx.moveTo(rand.get(0,540),rand.get(0,540));
+ctx.lineTo(rand.get(0,540),rand.get(0,540));
+ctx.stroke(); // 进行绘制
+}
+}
+function stylego(){
+var mycanvas=document.getElementById("canvas");
+var mycontext=mycanvas.getContext('2d');
+var mygradient=mycontext.createLinearGradient(0,0,540,540); 
+mygradient.addColorStop(0,getRandomColor());
+mygradient.addColorStop(1,getRandomColor());
+mycontext.fillStyle=mygradient;
+mycontext.fillRect(0,0,540,540);
+}
+function stylego2() {
+if (judge==0) return;
+var mycanvas=document.getElementById("canvas");
+var mycontext=mycanvas.getContext('2d');
+var mygradient=mycontext.createRadialGradient(300,300,0,300,300,300); 
+mygradient.addColorStop("0",getRandomColor());
+mygradient.addColorStop(".25",getRandomColor());
+mygradient.addColorStop(".50",getRandomColor());
+mygradient.addColorStop(".75",getRandomColor());
+mygradient.addColorStop("1.0",getRandomColor()); 
+mycontext.fillStyle=mygradient;
+mycontext.fillRect(0,0,540,540);
+}
+function stylego2self() {
+
+var mycanvas=document.getElementById("canvas");
+var mycontext=mycanvas.getContext('2d');
+var mygradient=mycontext.createRadialGradient(300,300,0,300,300,300); 
+mygradient.addColorStop("0",getRandomColor());
+mygradient.addColorStop(".25",getRandomColor());
+mygradient.addColorStop(".50",getRandomColor());
+mygradient.addColorStop(".75",getRandomColor());
+mygradient.addColorStop("1.0",getRandomColor()); 
+mycontext.fillStyle=mygradient;
+mycontext.fillRect(0,0,540,540);
+}
+function cycle1(){ 
+var canvas=document.getElementById("canvas");
+var context=canvas.getContext("2d");
+context.fillStyle=getRandomColor();
+context.beginPath();
+context.arc(rand.get(0,540),rand.get(0,540),rand.get(100,200),0,Math.PI*2,true); //Math.PI*2是JS计算方法
+context.closePath();
+context.fill();
+}
+function cycle2(){ 
+if (judge==0) return;
+var canvas=document.getElementById("canvas");
+var context=canvas.getContext("2d");
+context.fillStyle=getRandomColor();
+context.beginPath();
+context.arc(rand.get(0,540),rand.get(0,540),rand.get(0,50),0,Math.PI*2,true); //Math.PI*2是JS计算方法
+context.closePath();
+context.fill();
+}
+function cycle2self(){ 
+
+var canvas=document.getElementById("canvas");
+var context=canvas.getContext("2d");
+context.fillStyle=getRandomColor();
+context.beginPath();
+context.arc(rand.get(0,540),rand.get(0,540),rand.get(0,50),0,Math.PI*2,true); //Math.PI*2是JS计算方法
+context.closePath();
+context.fill();
+}
+function sleep(numberMillis) {
+var now = new Date();
+var exitTime = now.getTime() + numberMillis;
+while (true) {
+now = new Date();
+if (now.getTime() > exitTime)
+return;
+}
+
+ 
+
+}
+
+</script>
+
+</head>
+<body background=test.jpg>
+<p>PS:放射闪动(多点几下)+泡沫轰炸，挑战视网膜界限。----比如8下放射闪动+1下泡末轰炸（这就是穿梭效果）。</p>
+<p>多点几下穿梭效果更刺激.</p>
+<canvas id="canvas" width="540" height="540">
+Your browser doesn't support the HTML5 element canvas.
+</canvas> 
+<script type="text/javascript">
+function autoslow(){
+
+
+judge=1;
+setInterval('cycle2()',500); 
+
+}
+function autoflask(){
+
+
+judge=1;
+for(var i=0;i<100;i++)
+setInterval('cycle2()',500); 
+
+}
+function autoflash(){
+judge=1;
+setInterval('stylego2()',500);
+
+}
+function autogo(){
+judge=1;
+autogo1();autoflask();
+
+}
+function autogo1(){
+judge=1;
+setInterval('stylego2()',60);
+
+}
+function begin(){
+judge=1;
+for(var i=0;i<100;i++)
+setInterval('cycle2()',100); 
+}
+function stopbegin(){judge=0; stylego2self();}
+function stopbob(){
+judge=0;
+}
+begin();
+</script>
+
+<br/>
+<button onClick="stopbegin();" value="添线">开始 </button>
+<button onClick="printfpath();" value="添线">随机添线 </button>
+<button onClick="cycle1();" value="添圆">随机添大圆 </button>
+<button onClick="cycle2self();" value="添圆">随机添小圆 </button>
+<button onClick="stylego();" value="线性渐变背景">随机线性渐变背景 </button>
+<button onClick="stylego2self();" value="放射性渐变背景">随机放射性渐变背景 </button>
+<button onClick="autoslow();" value="泡沫滚屏">慢速泡沫 </button>
+<button onClick="autoflask();" value="泡沫滚屏">泡沫轰炸（点击增快速度） </button>
+<button onClick="autoflash();" value="放射闪动">刺激视觉的放射闪动 </button>
+<button onClick="autogo();" value="放射闪动">穿梭效果 </button>
+<button onClick="stopbob();" value="停止">停止 </button>
+</body>
+</html>
