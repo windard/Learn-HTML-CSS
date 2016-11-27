@@ -27,3 +27,36 @@ Date.prototype.Format = function(fmt)
 var time1 = new Date().format("yyyy-MM-dd hh:mm:ss");
 
 var time2 = new Date().format("yyyy-MM-dd");
+
+// 对 String 的扩展
+
+String.prototype.Trim = function() 
+{ 
+  return this.replace(/(^\s*)|(\s*$)/g, ""); 
+}
+
+String.prototype.LTrim = function() 
+{ 
+  return this.replace(/(^\s*)/g, ""); 
+}
+
+String.prototype.RTrim = function() 
+{ 
+  return this.replace(/(\s*$)/g, ""); 
+}
+String.prototype.ATrim = function()
+{
+  return this.replace(/\s/g,"");
+}
+
+function encode(s) {
+    return s.replace(/[\d\D]/g, function($) {
+        return ("000" + $.charCodeAt(0).toString(16)).slice(-4);
+    });
+}
+
+function decode(s) {
+    return s.replace(/.{4}/g, function($) {
+        return String.fromCharCode(parseInt($, 16));
+    });
+}
